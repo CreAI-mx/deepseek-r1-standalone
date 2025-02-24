@@ -32,7 +32,9 @@ sudo apt-get install -y docker.io
 # Descargar y configurar DeepSeek-R1 en Ollama
 echo "⬇️ Descargando DeepSeek-R1-Distill-Qwen-7B-GGUF en Ollama..."
 docker pull ollama/ollama:latest
-docker run --rm ollama/ollama:latest pull lmstudio-community/DeepSeek-R1-Distill-Qwen-7B-GGUF:Q3_K_L
+
+docker exec -it ollama ollama pull hf.co/bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF:IQ4_NL
+docker run -d --name ollama -p 11434:11434 ollama/ollama
 
 echo "✅ Instalación completada. Puedes ejecutar el contenedor con: 
 docker run --gpus all -p 11434:11434 ollama/ollama"
