@@ -33,7 +33,7 @@ sudo apt-get install -y docker.io
 echo "⬇️ Descargando DeepSeek-R1-Distill-Qwen-7B-GGUF en Ollama..."
 docker pull ollama/ollama:latest
 
-docker exec -it ollama ollama pull hf.co/bartowski/DeepSeek-R1-Distill-Qwen-1.5B-GGUF:IQ4_NL
+docker exec -it ollama ollama pull hf.co/lmstudio-community/DeepSeek-R1-Distill-Qwen-7B-GGUF:Q3_K_L
 docker run -d --name ollama -p 11434:11434 ollama/ollama
 
 echo "✅ Instalación completada. Puedes ejecutar el contenedor con: 
